@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+html,body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+}
+.container{
+    max-width: 350px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.title{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    position: relative;
+}
+.title::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 33px;
+    height: 4px;
+    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.underline::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+}
+.underline::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+.input-box input:focus ~ .underline::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.button input{
+    font-size: 17px;
+    color: #fff;
+    border-radius: 8px;
+    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover{
+        background: linear-gradient(to left, #99004D 0%, #ff0080 100%);
+        letter-spacing: 1px;
+    }
+}
+.option{
+    font-size: 16px;
+    margin-top: 5px;
+    text-align: center;
+}
+.twitter a, .facebook a{
+    display: block;
+    height: 45px;
+    width: 100%;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    line-height: 45px;
+    border-radius: 5px;
+}
+.twitter i, .facebook i{
+    padding-right: 12px;
+    font-size: 20px;
+}
+.twitter a{
+    margin: 20px 0 15px 0;
+    background: linear-gradient(to left, #00acee 0%, #1abeff 100%);
+}
+.twitter a:hover{
+    background: linear-gradient(to right, #00acee 0%, #1abeff 100%);
+}
+.facebook a{
+    margin: 20px 0 50px 0;
+    background: linear-gradient(to left, #3b5998 0%, #476bb8 100%);
+}
+.facebook a:hover{
+    background: linear-gradient(to right, #3b5998 0%, #476bb8 100%);
+}
